@@ -6,8 +6,8 @@
 from sklearn.neural_network import MLPClassifier
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-get_ipython().magic('matplotlib inline')
+#import matplotlib.pyplot as plt
+#get_ipython().magic('matplotlib inline')
 from sklearn import preprocessing  
 import time
 
@@ -55,7 +55,7 @@ def ann_iter(arch,iterations):
     params = {'activation' :'tanh', 
           'solver':'adam', 
           'hidden_layer_sizes':arch,
-          'verbose':False,
+          'verbose':True,
           'learning_rate':'adaptive',
           'warm_start':False, 
           'tol':1e-30, 
@@ -71,7 +71,7 @@ def ann_iter(arch,iterations):
     pred = np.array(pred_test)
     target = np.array(df_train_target_2.values)
     error =  rmsle(pred_test,target)
-    fitplot = plt.plot(pred_test,target,'.')
+    #fitplot = plt.plot(pred_test,target,'.')
     return {'time' : time_elapsed,'fit' : fit, 'error' : error}
 
 
@@ -84,8 +84,8 @@ opt_test = pd.DataFrame({'arch': map(lambda p : map(lambda it : (10**it,)*p , ra
 
 for fam in opt_test['arch']:
     for elem in fam:
-        print elem, ann_iter(elem,1000)
-    plt.show()
+        print (elem, ann_iter(elem,100000))
+    #plt.show()
 
 
 # In[32]:
