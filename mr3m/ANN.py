@@ -77,14 +77,14 @@ def ann_iter(arch,iterations):
 
 # In[8]:
 
-opt_test = pd.DataFrame({'arch': map(lambda p : map(lambda it : (10**it,)*p , range(4)),range(10)[1:])})
+opt_test = pd.DataFrame({'arch': map(lambda p : (100,)*p ,range(100))[1:]})
 
 
 # In[ ]:
 
-for fam in opt_test['arch']:
-    for elem in fam:
-        print (elem, ann_iter(elem,100000))
+for elem in opt_test['arch']:
+    #for elem in fam:
+    print (elem, ann_iter(elem,100000))
     #plt.show()
 
 
@@ -99,18 +99,18 @@ df_test_test = df_test_test.drop(['datetime'],axis = 1)
 
 # In[314]:
 
-out = ann.predict(df_test_test)
+#out = ann.predict(df_test_test)
 
 
 # In[315]:
 
-pred = pd.DataFrame({'datetime': df_test['datetime'],'count': out})
-pred = pred[['datetime','count']]
+#pred = pd.DataFrame({'datetime': df_test['datetime'],'count': out})
+#pred = pred[['datetime','count']]
 
 
 # In[316]:
 
-pred.to_csv("pred.csv", index = False)
+#pred.to_csv("pred.csv", index = False)
 
 
 # In[ ]:
