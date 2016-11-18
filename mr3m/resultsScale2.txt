@@ -1,0 +1,109 @@
+Iteration 1, loss = 1406.62555835
+Iteration 2, loss = 1268.95338402
+Iteration 3, loss = 1218.17430336
+Iteration 4, loss = 1187.67962266
+Iteration 5, loss = 1170.02505280
+Iteration 6, loss = 1160.72468538
+Iteration 7, loss = 1156.20678393
+Iteration 8, loss = 1154.01060104
+Iteration 9, loss = 1153.20323594
+Iteration 10, loss = 1152.89052970
+Iteration 11, loss = 1152.78032790
+Iteration 12, loss = 1152.76085895
+Iteration 13, loss = 1152.85124246
+Iteration 14, loss = 1152.87165577
+Iteration 15, loss = 1152.75713021
+Iteration 16, loss = 1152.78606095
+Iteration 17, loss = 1152.76906924
+Iteration 18, loss = 1152.78031503
+Training loss did not improve more than tol=0.000000 for two consecutive epochs. Stopping.
+{'ann': MLPRegressor(activation='tanh', alpha=0.0001, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100),
+       learning_rate='adaptive', learning_rate_init=0.001, max_iter=10000,
+       momentum=0.9, nesterovs_momentum=True, power_t=0.5,
+       random_state=None, shuffle=True, solver='adam', tol=1e-30,
+       validation_fraction=0.1, verbose=True, warm_start=False), 'error': 1.5645780397562723, 'fit': -2.9064671691614308e-06, 'time': 475.52}
+Iteration 1, loss = 17624.92549695
+Iteration 2, loss = 16700.51517459
+Iteration 3, loss = 16145.79668072
+Iteration 4, loss = 15636.65763474
+Iteration 5, loss = 15163.19977464
+Iteration 6, loss = 14721.09364995
+Iteration 7, loss = 14305.66679783
+Iteration 8, loss = 13917.33521259
+Iteration 9, loss = 13551.14704878
+Iteration 10, loss = 13209.40781285
+Iteration 11, loss = 12890.96680145
+Iteration 12, loss = 12590.75165371
+Iteration 13, loss = 12312.97871249
+Iteration 14, loss = 12052.01539253
+Iteration 15, loss = 11811.20326519
+Iteration 16, loss = 11586.21856370
+Iteration 17, loss = 11377.78476544
+Iteration 18, loss = 11185.45615360
+Iteration 19, loss = 11006.02415268
+Iteration 20, loss = 10841.63023074
+Iteration 21, loss = 10690.19986723
+Iteration 22, loss = 10550.75267721
+Iteration 23, loss = 10422.46769205
+Iteration 24, loss = 10306.71038756
+Iteration 25, loss = 10200.28702278
+Iteration 26, loss = 10103.53993091
+Iteration 27, loss = 10016.09822359
+Iteration 28, loss = 9936.79894427
+Iteration 29, loss = 9865.16581215
+Iteration 30, loss = 9800.80920229
+Iteration 31, loss = 9742.80619348
+Iteration 32, loss = 9691.66811298
+Iteration 33, loss = 9644.80087892
+Iteration 34, loss = 9604.59365985
+Iteration 35, loss = 9567.74652474
+Iteration 36, loss = 9535.58416952
+Iteration 37, loss = 9507.47213243
+Iteration 38, loss = 9482.67836446
+Iteration 39, loss = 9461.93334397
+Iteration 40, loss = 9442.46437511
+Iteration 41, loss = 9426.41393742
+Iteration 42, loss = 9412.38897336
+Iteration 43, loss = 9400.57461568
+Iteration 44, loss = 9390.31118825
+Iteration 45, loss = 9381.47044502
+Iteration 46, loss = 9374.14534638
+Iteration 47, loss = 9367.97334900
+Iteration 48, loss = 9362.77831253
+Iteration 49, loss = 9358.39695832
+Iteration 50, loss = 9354.75267819
+Iteration 51, loss = 9351.86086551
+Iteration 52, loss = 9349.50599743
+Iteration 53, loss = 9347.55265034
+Iteration 54, loss = 9345.91088266
+Iteration 55, loss = 9344.55895234
+Iteration 56, loss = 9343.65461991
+Iteration 57, loss = 9342.60028505
+Iteration 58, loss = 9342.04410814
+Iteration 59, loss = 9341.47311382
+Iteration 60, loss = 9340.95986074
+Iteration 61, loss = 9340.74503502
+Iteration 62, loss = 9340.39819477
+Iteration 63, loss = 9340.23360026
+Iteration 64, loss = 9340.07924358
+Iteration 65, loss = 9340.17105473
+Iteration 66, loss = 9339.88870132
+Iteration 67, loss = 9339.83386880
+Iteration 68, loss = 9339.81903585
+Iteration 69, loss = 9339.79151520
+Iteration 70, loss = 9339.89015021
+Iteration 71, loss = 9339.77919729
+Iteration 72, loss = 9339.74554338
+Iteration 73, loss = 9339.87358413
+Iteration 74, loss = 9339.76652076
+Iteration 75, loss = 9339.96919587
+Training loss did not improve more than tol=0.000000 for two consecutive epochs. Stopping.
+{'ann': MLPRegressor(activation='tanh', alpha=0.0001, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100),
+       learning_rate='adaptive', learning_rate_init=0.001, max_iter=10000,
+       momentum=0.9, nesterovs_momentum=True, power_t=0.5,
+       random_state=None, shuffle=True, solver='adam', tol=1e-30,
+       validation_fraction=0.1, verbose=True, warm_start=False), 'error': 1.3502613554678335, 'fit': -1.7628925816914887e-06, 'time': 1994.19}

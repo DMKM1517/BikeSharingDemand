@@ -6,8 +6,8 @@
 from sklearn.neural_network import MLPRegressor
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-get_ipython().magic('matplotlib inline')
+#import matplotlib.pyplot as plt
+#get_ipython().magic('matplotlib inline')
 from sklearn import preprocessing  
 import time
 
@@ -40,8 +40,8 @@ df_train = df_train.drop(['datetime'],axis=1)
 
 # In[5]:
 
-#df_train_train = df_train.drop(['count','registered','casual','holiday','workingday','weather','season'],axis = 1)
-df_train_train = df_train.drop(['count','registered','casual'],axis = 1)
+df_train_train = df_train.drop(['count','registered','casual','holiday','workingday','weather','season'],axis = 1)
+#df_train_train = df_train.drop(['count','registered','casual'],axis = 1)
 df_train_target_a = df_train['casual']
 df_train_target_b = df_train['registered']
 df_train_target_c = df_train['count']
@@ -73,7 +73,7 @@ def ann_iter(df_in,df_target,arch,iterations):
     pred = np.array(pred_test)
     target = np.array(df_train_target_a_2.values)
     error =  rmsle(pred_test,target)
-    fitplot = plt.plot(pred_test,target,'.')
+   # fitplot = plt.plot(pred_test,target,'.')
     return {'time' : time_elapsed,'fit' : fit, 'error' : error, 'ann':ann}
 
 
@@ -92,7 +92,7 @@ def ann_iter(df_in,df_target,arch,iterations):
 
 # In[9]:
 
-arch = (1000,)*2
+arch = (100,)*100
 
 
 # In[10]:
@@ -107,8 +107,8 @@ print ann2
 
 # In[ ]:
 
-df_test_test = df_test
-#df_test_test = df_test.drop(['holiday','workingday','weather','season'],axis = 1)
+#df_test_test = df_test
+df_test_test = df_test.drop(['holiday','workingday','weather','season'],axis = 1)
 df_test_test['month'] = pd.DatetimeIndex(df_test_test.datetime).month
 df_test_test['day'] = pd.DatetimeIndex(df_test_test.datetime).dayofweek
 df_test_test['hour'] = pd.DatetimeIndex(df_test_test.datetime).hour
@@ -137,12 +137,12 @@ pred = pred[['datetime','count']]
 
 # In[ ]:
 
-pred.to_csv("pred.csv", index = False)
+pred.to_csv("pred3.csv", index = False)
 
 
 # In[ ]:
 
-plt.plot(out1,out2,'.')
+#plt.plot(out1,out2,'.')
 
 
 # In[ ]:
@@ -152,19 +152,19 @@ plt.plot(out1,out2,'.')
 
 # In[ ]:
 
-plt.plot(out,'.')
+#plt.plot(out,'.')
+
+
+# In[ ]:
+#
+#plt.plot(df_train_target_a,ann1['ann'].predict(preprocessing.scale(df_train_train)) ,'.')
+#plt.plot(df_train_target_b,ann2['ann'].predict(preprocessing.scale(df_train_train)) ,'.')
 
 
 # In[ ]:
 
-plt.plot(df_train_target_a,ann1['ann'].predict(preprocessing.scale(df_train_train)) ,'.')
-plt.plot(df_train_target_b,ann2['ann'].predict(preprocessing.scale(df_train_train)) ,'.')
-
-
-# In[ ]:
-
-plt.plot(ann1['ann'].predict(preprocessing.scale(df_train_train)) ,'.')
-plt.plot(ann2['ann'].predict(preprocessing.scale(df_train_train)) ,'.')
+#plt.plot(ann1['ann'].predict(preprocessing.scale(df_train_train)) ,'.')
+#plt.plot(ann2['ann'].predict(preprocessing.scale(df_train_train)) ,'.')
 
 
 # In[ ]:
