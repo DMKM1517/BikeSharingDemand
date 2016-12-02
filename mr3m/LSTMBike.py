@@ -132,7 +132,7 @@ y_val = scaler.fit_transform(test_y.values)
 # generate dummy validation data
 
 model.fit(x_train, y_train,
-          batch_size=64, nb_epoch=5,
+          batch_size=64, nb_epoch=100,
           validation_data=(x_val, y_val))
 
 
