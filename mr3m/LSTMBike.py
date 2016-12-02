@@ -20,6 +20,7 @@ from keras.layers import LSTM, SimpleRNN
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 import scipy as scipy
+from keras.regularizers import l1, activity_l1
 
 
 # In[3]:
@@ -113,10 +114,11 @@ timesteps = 1
 
 # expected input data shape: (batch_size, timesteps, data_dim)
 model = Sequential()
-model.add(LSTM(32, return_sequences=True,
+model.add(LSTM(100, return_sequences=True,
                input_shape=(timesteps, data_dim)))  # returns a sequence of vectors of dimension 32
-model.add(LSTM(32, return_sequences=True))  # returns a sequence of vectors of dimension 32
-model.add(LSTM(32))  # return a single vector of dimension 32
+model.add(LSTM(100, return_sequences=True, W_regularizer=l1(0.01)))  # returns a sequence of vectors of dimension 32
+model.add(LSTM(50, return_sequences = True, W_regularizer=l1(0.01)))
+model.add(LSTM(24, W_regularizer=l1(0.01)))  # return a single vector of dimension 32
 model.add(Dense(1, activation='linear'))
 
 model.compile(loss='mean_squared_error',
@@ -132,7 +134,7 @@ y_val = scaler.fit_transform(test_y.values)
 # generate dummy validation data
 
 model.fit(x_train, y_train,
-          batch_size=64, nb_epoch=100,
+          batch_size=1000, nb_epoch=500,
           validation_data=(x_val, y_val))
 
 
